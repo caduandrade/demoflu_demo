@@ -1,11 +1,11 @@
 {
-    "name": "demo_demo",
-    "short_name": "demo_demo",
+    "name": "demoflu_demo",
+    "short_name": "demoflu_demo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Demoflu Demo",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
