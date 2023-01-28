@@ -1,11 +1,11 @@
 {
-    "name": "davi_flutter_demo",
-    "short_name": "davi_flutter_demo",
+    "name": "demo_demo",
+    "short_name": "demo_demo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Davi Demo",
+    "description": "Demoflu Demo",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
