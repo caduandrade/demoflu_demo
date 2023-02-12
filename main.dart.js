@@ -20635,7 +20635,7 @@ r.d=s
 s=A.b([j,i,h,g,f,k,s],t.lz)
 if($.an==null)A.aym()
 k=$.an
-k.N0(new A.tK("DemoFlu",s,n))
+k.N0(new A.tK("DemoFlu (1.2.1)",s,n))
 k.BH()},
 auY(a){return B.c.jj(B.h.iv(a.gk(a),16).toUpperCase(),8,"0")},
 auZ(a,b){var s,r,q,p,o=null,n=a==null
@@ -36869,7 +36869,8 @@ for(s=this.c,r=0;!1;++r){q=b[r]
 s.push(q)
 q.d=this}},
 ga4o(){var s,r=this.d
-for(s=0;r!=null;){r=r.d;++s}return s}}
+for(s=0;r!=null;){r=r.d;++s}return s},
+l(a){return"DemoMenuItem{name: "+this.a+"}"}}
 A.tK.prototype={
 ag(){var s=A.b([],t.s),r=$.bw()
 return new A.oB(new A.CU(s,r),new A.GX(r),A.b([],t.lz),B.j)}}
@@ -36885,7 +36886,7 @@ r.w.a2(0,new A.Tr(r))},
 FY(){var s,r=this,q=r.a60(r.a.f)
 r.x=q
 if(r.f==null){s=B.b.Kk(q,new A.Tn())
-if(s!==-1)r.f=r.a.f[s]}},
+if(s!==-1)r.f=r.x[s]}},
 a60(a){var s,r=A.b([],t.lz)
 for(s=0;s<7;++s)this.FZ(a[s],r)
 return r},
