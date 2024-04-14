@@ -51,7 +51,23 @@ flutter:
   assets:
     - lib/main.dart
     - lib/pages/
-    - lib/samples/
+    - lib/pages/macros/
+    - lib/pages/get_started/
+    - lib/pages/bootstrap/
+    - lib/pages/code/
+    - lib/pages/mark/
+    - lib/pages/text/
+    - lib/pages/banner/
+    - lib/pages/console/
+    - lib/pages/build_for_web/
+    - lib/pages/stateless/
+    - lib/pages/stateful/
+    - lib/pages/listenable/
+    - lib/pages/margin/
+    - lib/pages/not_resizable/
+    - lib/pages/border/
+    - lib/pages/group/
+    - lib/pages/page/
 
   fonts:
     - family: code

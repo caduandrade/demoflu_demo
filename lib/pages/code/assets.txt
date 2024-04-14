@@ -1,0 +1,5 @@
+flutter:
+
+  assets:
+    - lib/pages/my_page_1/
+    - lib/pages/my_page_2/

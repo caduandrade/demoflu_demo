@@ -1,58 +1,57 @@
 import 'package:demoflu/demoflu.dart';
-import 'package:demoflu_demo/pages/banner_page.dart';
-import 'package:demoflu_demo/pages/boostrap.dart';
-import 'package:demoflu_demo/pages/build_for_web.dart';
-import 'package:demoflu_demo/pages/code_page.dart';
-import 'package:demoflu_demo/pages/console_page.dart';
-import 'package:demoflu_demo/pages/get_started_page.dart';
-import 'package:demoflu_demo/pages/listenable_page.dart';
-import 'package:demoflu_demo/pages/marks_page.dart';
-import 'package:demoflu_demo/pages/page.dart';
-import 'package:demoflu_demo/pages/stateful_page.dart';
-import 'package:demoflu_demo/pages/stateless_page.dart';
-import 'package:demoflu_demo/pages/text_page.dart';
+import 'package:demoflu_demo/pages/banner/banner_page.dart';
+import 'package:demoflu_demo/pages/bootstrap/boostrap.dart';
+import 'package:demoflu_demo/pages/border/border_page.dart';
+import 'package:demoflu_demo/pages/build_for_web/build_for_web.dart';
+import 'package:demoflu_demo/pages/code/code_page.dart';
+import 'package:demoflu_demo/pages/console/console_page.dart';
+import 'package:demoflu_demo/pages/get_started/get_started_page.dart';
+import 'package:demoflu_demo/pages/group/group_page.dart';
+import 'package:demoflu_demo/pages/listenable/listenable_page.dart';
+import 'package:demoflu_demo/pages/macros/macros_page.dart';
+import 'package:demoflu_demo/pages/mark/mark_page.dart';
+import 'package:demoflu_demo/pages/page/page.dart';
+import 'package:demoflu_demo/pages/margin/margin_page.dart';
+import 'package:demoflu_demo/pages/stateful/stateful_page.dart';
+import 'package:demoflu_demo/pages/stateless/stateless_page.dart';
+import 'package:demoflu_demo/pages/text/text_page.dart';
+import 'package:flutter/material.dart';
 
 void main() {
-  DemoFluApp(
-          title: 'DemoFlu (2.0.0)',
-          rootMenus: [_getStarted, _main, _page, _pageSections, _buildForWeb])
-      .run();
+  DemoFluApp app = DemoFluApp(title: 'DemoFlu (2.1.0)', rootMenus: _rootMenus);
+  app.macro.group('myMacro', (context, page) {
+    PageSectionGroup section = page.group();
+    section
+      ..padding = const EdgeInsets.all(8)
+      ..background = Colors.green[50]
+      ..solidBorder(color: Colors.green)
+      ..heading('Example')
+      ..text(text: 'Macros are useful for reusing sections.');
+    return section;
+  });
+  app.run();
 }
 
-DemoMenuItem get _getStarted =>
-    DemoMenuItem('Get started', page: () => GetStartedPage());
-
-DemoMenuItem get _main =>
-    DemoMenuItem('Bootstrap', page: () => BootstrapPage());
-
-DemoMenuItem get _page => DemoMenuItem('Page', page: () => Page());
-
-DemoMenuItem get _pageSections => DemoMenuItem('Page sections',
-    children: [_code, _text, _banner, _widgetSection, _console]);
-
-DemoMenuItem get _code =>
-    DemoMenuItem('Code', page: () => CodePage(), children: [_markedCode]);
-
-DemoMenuItem get _markedCode =>
-    DemoMenuItem('Marked code', page: () => MarksPage());
-
-DemoMenuItem get _text => DemoMenuItem('Text', page: () => TextPage());
-
-DemoMenuItem get _banner => DemoMenuItem('Banner', page: () => BannerPage());
-
-DemoMenuItem get _widgetSection =>
-    DemoMenuItem('Widget', children: [_stateless, _stateful, _listenable]);
-
-DemoMenuItem get _stateless =>
-    DemoMenuItem('Stateless', page: () => StatelessPage());
-
-DemoMenuItem get _stateful =>
-    DemoMenuItem('Stateful', page: () => StatefulPage());
-
-DemoMenuItem get _listenable =>
-    DemoMenuItem('Listenable', page: () => ListenablePage());
-
-DemoMenuItem get _console => DemoMenuItem('Console', page: () => ConsolePage());
-
-DemoMenuItem get _buildForWeb =>
-    DemoMenuItem('Build for web', page: () => BuildForWeb());
+List<DemoMenuItem> get _rootMenus => [
+      DemoMenuItem('Get started', page: () => GetStartedPage()),
+      DemoMenuItem('Bootstrap', page: () => BootstrapPage()),
+      DemoMenuItem('Page', page: () => AboutPage()),
+      DemoMenuItem('Page sections', children: [
+        DemoMenuItem('Code',
+            page: () => CodePage(),
+            children: [DemoMenuItem('Marked code', page: () => MarkPage())]),
+        DemoMenuItem('Text', page: () => TextPage()),
+        DemoMenuItem('Margin', page: () => MarginPage()),
+        DemoMenuItem('Banner', page: () => BannerPage()),
+        DemoMenuItem('Widget', children: [
+          DemoMenuItem('Stateless', page: () => StatelessPage()),
+          DemoMenuItem('Stateful', page: () => StatefulPage()),
+          DemoMenuItem('Listenable', page: () => ListenablePage())
+        ]),
+        DemoMenuItem('Border', page: () => BorderPage()),
+        DemoMenuItem('Group', page: () => GroupPage()),
+        DemoMenuItem('Console', page: () => ConsolePage())
+      ]),
+      DemoMenuItem('Macros', page: () => MacrosPage()),
+      DemoMenuItem('Build for web', page: () => BuildForWeb())
+    ];
