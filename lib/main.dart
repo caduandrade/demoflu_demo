@@ -18,7 +18,7 @@ import 'package:demoflu_demo/pages/text/text_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  DemoFluApp app = DemoFluApp(title: 'DemoFlu (2.1.0)', rootMenus: _rootMenus);
+  DemoFluApp app = DemoFluApp(title: 'DemoFlu (2.2.0)', rootMenus: _rootMenus);
   app.macro.group('myMacro', (context, section) {
     section
       ..padding = const EdgeInsets.all(8)
