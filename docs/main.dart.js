@@ -8703,7 +8703,7 @@ uc:function uc(a){this.a=a},
 xF:function xF(a,b){this.c=a
 this.a=b},
 aD_(){var s,r,q,p=A.aB4(),o=A.b([],t.s),n=$.al()
-p=A.atV(p,"DemoFlu (2.1.0)")
+p=A.atV(p,"DemoFlu (2.2.0)")
 s=Math.max(0,0)
 r=Math.max(0,24)
 q=t.z
