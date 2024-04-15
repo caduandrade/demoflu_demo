@@ -19,15 +19,13 @@ import 'package:flutter/material.dart';
 
 void main() {
   DemoFluApp app = DemoFluApp(title: 'DemoFlu (2.1.0)', rootMenus: _rootMenus);
-  app.macro.group('myMacro', (context, page) {
-    PageSectionGroup section = page.group();
+  app.macro.group('myMacro', (context, section) {
     section
       ..padding = const EdgeInsets.all(8)
       ..background = Colors.green[50]
       ..solidBorder(color: Colors.green)
       ..heading('Example')
       ..text(text: 'Macros are useful for reusing sections.');
-    return section;
   });
   app.run();
 }

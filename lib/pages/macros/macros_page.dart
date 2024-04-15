@@ -14,13 +14,14 @@ class MacrosPage extends DemoFluPage {
         loadMode: LoadMode.readOnlyMarked);
 
     code('lib/pages/macros/macros_page.dart',
-        title: 'Running the macro in the page',
+        title: 'Running the macro in the section',
         mark: 'show',
         loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:show
-    runGroupMacro('myMacro', context)
-        .text(text: 'This is a section added to the macro result.');
+    group()
+      ..runMacro(id: 'myMacro', context: context)
+      ..text(text: 'This is a section added after the macro runs.');
     //@demoflu_end:show
   }
 }
