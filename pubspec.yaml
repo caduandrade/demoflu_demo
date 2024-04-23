@@ -30,8 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  demoflu:
-    path: ../demoflu/
+  demoflu: 2.3.0
+    #path: ../demoflu/
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +58,7 @@ flutter:
     - lib/pages/mark/
     - lib/pages/text/
     - lib/pages/banner/
+    - lib/pages/bullets/
     - lib/pages/console/
     - lib/pages/build_for_web/
     - lib/pages/stateless/
