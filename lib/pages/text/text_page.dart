@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 
 class TextPage extends DemoFluPage {
   @override
-  void initialize(BuildContext context) {
-    text(text: 'You can add texts using the textSection method.');
+  PageSections buildSections(BuildContext context) {
+    PageSections sections = PageSections();
 
-    text(icon: Icons.check, text: 'The text can start with an icon.');
+    sections.text(text: 'You can add texts using the textSection method.');
 
-    code('lib/pages/text/text_page.dart',
+    sections.text(icon: Icons.check, text: 'The text can start with an icon.');
+
+    sections.code('lib/pages/text/text_page.dart',
         title: 'The source code of this page');
+
+    return sections;
   }
 }

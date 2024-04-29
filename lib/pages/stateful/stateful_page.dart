@@ -4,16 +4,20 @@ import 'package:flutter/widgets.dart';
 
 class StatefulPage extends DemoFluPage {
   @override
-  void initialize(BuildContext context) {
-    code('lib/pages/stateful/stateful_page.dart',
+  PageSections buildSections(BuildContext context) {
+    PageSections sections = PageSections();
+
+    sections.code('lib/pages/stateful/stateful_page.dart',
         loadMode: LoadMode.readOnlyMarked, mark: 'widget');
 
     //@demoflu_start:widget
-    widget((context) => const StatefulExample(),
+    sections.widget((context) => const StatefulExample(),
         title: 'Example of a Stateful widget', maxWidth: 500);
     //@demoflu_end:widget
 
-    code('lib/pages/stateful/stateful_example.dart',
+    sections.code('lib/pages/stateful/stateful_example.dart',
         title: 'Widget source code');
+
+    return sections;
   }
 }

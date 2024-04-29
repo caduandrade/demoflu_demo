@@ -3,60 +3,64 @@ import 'package:flutter/material.dart';
 
 class BannerPage extends DemoFluPage {
   @override
-  void initialize(BuildContext context) {
-    code('lib/pages/banner/banner_page.dart',
+  PageSections buildSections(BuildContext context) {
+    PageSections sections = PageSections();
+
+    sections.code('lib/pages/banner/banner_page.dart',
         mark: 'banner', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:banner
-    banner(text: 'My first banner.');
+    sections.banner(text: 'My first banner.');
     //@demoflu_end:banner
 
-    heading('Icon');
+    sections.heading('Icon');
 
-    code('lib/pages/banner/banner_page.dart',
+    sections.code('lib/pages/banner/banner_page.dart',
         mark: 'icon', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:icon
-    banner(text: 'You can add any icon.', icon: Icons.search);
+    sections.banner(text: 'You can add any icon.', icon: Icons.search);
     //@demoflu_end:icon
 
-    heading('Custom colors');
+    sections.heading('Custom colors');
 
-    code('lib/pages/banner/banner_page.dart',
+    sections.code('lib/pages/banner/banner_page.dart',
         mark: 'custom', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:custom
-    banner(
+    sections.banner(
         text: 'You can also change the colors.',
         background: Colors.purple[50],
         border: Colors.purple[700]);
     //@demoflu_end:custom
 
-    heading('Warning');
+    sections.heading('Warning');
 
-    code('lib/pages/banner/banner_page.dart',
+    sections.code('lib/pages/banner/banner_page.dart',
         mark: 'warning', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:warning
-    warningBanner(text: 'This is a warning banner.');
+    sections.warningBanner(text: 'This is a warning banner.');
     //@demoflu_end:warning
 
-    heading('Info');
+    sections.heading('Info');
 
-    code('lib/pages/banner/banner_page.dart',
+    sections.code('lib/pages/banner/banner_page.dart',
         mark: 'info', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:info
-    infoBanner(text: 'This is an info banner.');
+    sections.infoBanner(text: 'This is an info banner.');
     //@demoflu_end:info
 
-    heading('Tip');
+    sections.heading('Tip');
 
-    code('lib/pages/banner/banner_page.dart',
+    sections.code('lib/pages/banner/banner_page.dart',
         mark: 'tip', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:tip
-    tipBanner(text: 'This is a tip banner.');
+    sections.tipBanner(text: 'This is a tip banner.');
     //@demoflu_end:tip
+
+    return sections;
   }
 }

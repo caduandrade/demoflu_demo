@@ -30,8 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  demoflu: 2.3.0
-    #path: ../demoflu/
+  demoflu: #2.4.0
+    path: ../demoflu/
 
 dev_dependencies:
   flutter_test:

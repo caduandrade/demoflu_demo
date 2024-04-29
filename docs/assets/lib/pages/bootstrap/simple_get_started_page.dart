@@ -3,5 +3,8 @@ import 'package:flutter/widgets.dart';
 
 class GetStartedPage extends DemoFluPage {
   @override
-  void initialize(BuildContext context) {}
+  PageSections buildSections(BuildContext context) {
+    PageSections sections = PageSections();
+    return sections;
+  }
 }

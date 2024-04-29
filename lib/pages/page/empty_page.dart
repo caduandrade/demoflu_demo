@@ -3,7 +3,9 @@ import 'package:flutter/widgets.dart';
 
 class MyPage extends DemoFluPage {
   @override
-  void initialize(BuildContext context) {
+  PageSections buildSections(BuildContext context) {
+    PageSections sections = PageSections();
     // You must use the specific methods to create sessions here.
+    return sections;
   }
 }

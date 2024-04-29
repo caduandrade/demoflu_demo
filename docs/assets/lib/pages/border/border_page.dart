@@ -3,49 +3,51 @@ import 'package:flutter/material.dart';
 
 class BorderPage extends DemoFluPage {
   @override
-  void initialize(BuildContext context) {
-    text(text: 'All styled sections can have borders.');
+  PageSections buildSections(BuildContext context) {
+    PageSections sections = PageSections();
 
-    heading('Solid');
+    sections.text(text: 'All styled sections can have borders.');
 
-    code('lib/pages/border/border_page.dart',
+    sections.heading('Solid');
+
+    sections.code('lib/pages/border/border_page.dart',
         mark: 'solid', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:solid
-    text(text: 'This is a solid border.')
+    sections.text(text: 'This is a solid border.')
       ..padding = const EdgeInsets.all(8)
       ..solidBorder(color: Colors.blue);
     //@demoflu_end:solid
 
-    heading('Arrow');
+    sections.heading('Arrow');
 
-    code('lib/pages/border/border_page.dart',
+    sections.code('lib/pages/border/border_page.dart',
         mark: 'arrow', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:arrow
-    text(text: 'This is an arrow border.')
+    sections.text(text: 'This is an arrow border.')
       ..padding = const EdgeInsets.all(8)
       ..arrowDownBorder();
     //@demoflu_end:arrow
 
-    heading('Bullet');
+    sections.heading('Bullet');
 
-    code('lib/pages/border/border_page.dart',
+    sections.code('lib/pages/border/border_page.dart',
         mark: 'bullet', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:bullet
-    text(text: 'This is a bullet border.')
+    sections.text(text: 'This is a bullet border.')
       ..padding = const EdgeInsets.all(8)
       ..bulletBorder(color: Colors.grey);
     //@demoflu_end:bullet
 
-    heading('Bullet with icon');
+    sections.heading('Bullet with icon');
 
-    code('lib/pages/border/border_page.dart',
+    sections.code('lib/pages/border/border_page.dart',
         mark: 'bullet_icon', loadMode: LoadMode.readOnlyMarked);
 
     //@demoflu_start:bullet_icon
-    text(text: 'This is a bullet border with icon.')
+    sections.text(text: 'This is a bullet border with icon.')
       ..padding = const EdgeInsets.fromLTRB(8, 24, 8, 8)
       ..bulletBorder(
           icon: Icons.person,
@@ -55,5 +57,7 @@ class BorderPage extends DemoFluPage {
           diameter: 28,
           iconWeight: .7);
     //@demoflu_end:bullet_icon
+
+    return sections;
   }
 }
