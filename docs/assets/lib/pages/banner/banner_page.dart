@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 
 class BannerPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.code('lib/pages/banner/banner_page.dart',
         mark: 'banner', loadMode: LoadMode.readOnlyMarked);
 
@@ -60,7 +58,5 @@ class BannerPage extends DemoFluPage {
     //@demoflu_start:tip
     sections.tipBanner(text: 'This is a tip banner.');
     //@demoflu_end:tip
-
-    return sections;
   }
 }

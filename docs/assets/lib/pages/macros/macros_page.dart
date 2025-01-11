@@ -3,9 +3,7 @@ import 'package:flutter/widgets.dart';
 
 class MacrosPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.text()
       ..add('Macros enable the automation of creating and configuring sections')
       ..add(' by defining reusable sequences of instructions or actions.');
@@ -25,7 +23,5 @@ class MacrosPage extends DemoFluPage {
       ..runMacro(id: 'myMacro', context: context)
       ..text(text: 'This is a section added after the macro runs.');
     //@demoflu_end:show
-
-    return sections;
   }
 }

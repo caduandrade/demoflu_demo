@@ -3,9 +3,7 @@ import 'package:flutter/widgets.dart';
 
 class AboutPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.text(text: 'This is where you can demonstrate your package.');
 
     sections.text()
@@ -17,7 +15,5 @@ class AboutPage extends DemoFluPage {
       ..add(' which should be invoked within the buildSections method.');
 
     sections.code('lib/pages/page/empty_page.dart', title: 'Example');
-
-    return sections;
   }
 }

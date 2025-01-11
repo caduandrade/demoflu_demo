@@ -3,9 +3,7 @@ import 'package:flutter/widgets.dart';
 
 class BootstrapPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.heading('Main');
 
     sections.text()
@@ -38,7 +36,5 @@ class BootstrapPage extends DemoFluPage {
 
     sections.code('lib/main.dart',
         title: 'This is the main source code for this demo');
-
-    return sections;
   }
 }

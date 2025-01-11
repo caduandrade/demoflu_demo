@@ -3,9 +3,7 @@ import 'package:flutter/widgets.dart';
 
 class GetStartedPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.heading('Welcome to DemoFlu');
 
     sections.text()
@@ -35,7 +33,5 @@ class GetStartedPage extends DemoFluPage {
     bullets.create(text: 'Set up the main with the menu');
     bullets.create(text: 'Define pages, sections and contents');
     bullets.create(text: 'Build and publish');
-
-    return sections;
   }
 }

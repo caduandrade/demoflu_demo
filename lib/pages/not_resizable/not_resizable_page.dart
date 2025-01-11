@@ -4,13 +4,9 @@ import 'package:flutter/widgets.dart';
 
 class NotResizablePage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.widget((context) => const NotResizableExample());
 
     sections.code('lib/pages/not_resizable/not_resizable_example.dart');
-
-    return sections;
   }
 }

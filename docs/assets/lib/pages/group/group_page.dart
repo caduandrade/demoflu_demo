@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 
 class GroupPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.text(
         text:
             'It is a collection of related sections grouped together for organizational purposes.');
@@ -21,7 +19,5 @@ class GroupPage extends DemoFluPage {
       ..text(text: 'This section is in the group.')
       ..banner(text: 'This section also in the group.');
     //@demoflu_end:group
-
-    return sections;
   }
 }

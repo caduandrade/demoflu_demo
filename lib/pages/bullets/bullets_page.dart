@@ -3,9 +3,7 @@ import 'package:flutter/widgets.dart';
 
 class BulletsPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.text()
       ..add('Configure each bullet individually by adjusting')
       ..add(' its indentation.');
@@ -18,7 +16,5 @@ class BulletsPage extends DemoFluPage {
 
     sections.code('lib/pages/bullets/bullets_page.dart',
         mark: 'code', loadMode: LoadMode.readOnlyMarked);
-
-    return sections;
   }
 }

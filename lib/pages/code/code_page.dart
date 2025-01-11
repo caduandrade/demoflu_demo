@@ -3,9 +3,7 @@ import 'package:flutter/widgets.dart';
 
 class CodePage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.text()
       ..add('You can show any source code using the code section method')
       ..add(' by setting the path to the source file code.');
@@ -29,7 +27,5 @@ class CodePage extends DemoFluPage {
 
     sections.code('lib/pages/code/fonts.txt',
         title: 'Example of a monospaced font');
-
-    return sections;
   }
 }

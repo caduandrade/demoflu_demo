@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 
 class BorderPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.text(text: 'All styled sections can have borders.');
 
     sections.heading('Solid');
@@ -57,7 +55,5 @@ class BorderPage extends DemoFluPage {
           diameter: 28,
           iconWeight: .7);
     //@demoflu_end:bullet_icon
-
-    return sections;
   }
 }

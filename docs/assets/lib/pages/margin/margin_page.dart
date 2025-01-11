@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 
 class MarginPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.text(text: 'You can change the bottom and left margins.');
 
     sections.text(text: 'Example:');
@@ -21,7 +19,5 @@ class MarginPage extends DemoFluPage {
 
     sections.code('lib/pages/margin/margin_page.dart',
         title: 'The source code of this page');
-
-    return sections;
   }
 }

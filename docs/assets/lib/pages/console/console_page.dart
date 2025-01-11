@@ -4,9 +4,7 @@ import 'package:flutter/widgets.dart';
 
 class ConsolePage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.text(text: 'It is possible to capture console output.');
 
     sections.widget((context) => const ConsoleExample(),
@@ -19,7 +17,5 @@ class ConsolePage extends DemoFluPage {
 
     sections.code('lib/pages/console/console_page.dart',
         title: 'The source code of this page');
-
-    return sections;
   }
 }

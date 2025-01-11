@@ -4,9 +4,7 @@ import 'package:flutter/widgets.dart';
 
 class StatefulPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.code('lib/pages/stateful/stateful_page.dart',
         loadMode: LoadMode.readOnlyMarked, mark: 'widget');
 
@@ -17,7 +15,5 @@ class StatefulPage extends DemoFluPage {
 
     sections.code('lib/pages/stateful/stateful_example.dart',
         title: 'Widget source code');
-
-    return sections;
   }
 }

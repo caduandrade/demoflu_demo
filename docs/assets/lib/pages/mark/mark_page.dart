@@ -3,9 +3,7 @@ import 'package:flutter/widgets.dart';
 
 class MarkPage extends DemoFluPage {
   @override
-  PageSections buildSections(BuildContext context) {
-    PageSections sections = PageSections();
-
+  void buildSections(BuildContext context, PageSections sections) {
     sections.text(text: 'You can mark code segments with special comments.');
 
     sections.text()
@@ -43,7 +41,5 @@ class MarkPage extends DemoFluPage {
         loadMode: LoadMode.readOnlyMarked,
         mark: 'show');
     //@demoflu_end:onlyMarked
-
-    return sections;
   }
 }
